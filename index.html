@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+    <style>
+        body {
+            background: url('pagebg.jpg')
+        }
+
+        #container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        #game {
+            position: relative;
+            float: left;
+        }
+
+        #gameArea {
+            position: absolute;
+            box-sizing: border-box;
+        }
+
+        #lambo {
+            position: relative;
+            top: 250px;
+            left: 0px;
+            display: block;
+            width: 20%;
+        }
+
+        #ferrari {
+            position: relative;
+            top: 280px;
+            left: -15px;
+            display: block;
+            width: 22%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: white;
+            text-shadow: 5px 7px 6px rgba(0, 0, 0, 0.3);
+            color: orange
+        }
+
+        header button {
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        header button:active {
+            top: 10px;
+        }
+
+        header button#race {
+            background: orange;
+            background: linear-gradient(yellow, orange)
+        }
+
+        header button#reset {
+            background: orange;
+            background: linear-gradient(orange, red)
+        }
+
+        #results {
+            display: none;
+        }
+
+        #results1,
+        #results2 {
+            width: 300px;
+            height: 400px;
+            float: left;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        #results1 {
+            background: yellow;
+            background: linear-gradient(yellow, orange)
+        }
+
+        #results2 {
+            background: orange;
+            background: linear-gradient(orange, red)
+        }
+
+        #resultH1 {
+            text-align: center;
+            color: orange;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Lamborghini Vs Ferrari 2018</h1>
+        <button type="button" id="race">Race!</button>
+        <button type="button" id="reset">Reset</button>
+    </header>
+    <div id="container">
+        <div id="game">
+            <img src="bg.jpg" id="gameArea" width=800>
+            <img id="lambo" src="lambo-web.png">
+            <img id="ferrari" src="ferrari2.png">
+        </div>
+        <h1 id="resultH1">Results of this Match</h1>
+        <div id="results">
+            <div id="results1">
+                <h1>Lambo Finished In <span id="lamboPlace"></span> Place After Racing for <span id="lamboMs"></span>Milliseconds</div>
+            <div id="results2">
+                <h1>Ferrari Finished In <span id="ferrariPlace"></span> Place After Racing for <span id="ferrariMs"></span>Milliseconds</div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="main.js" type="text/javascript"></script>
+
+</body>
+
+</html>
