@@ -1,7 +1,7 @@
 $(function() {
 
     $('#race').click(function() {
-
+resetGame();
         var trackWidth = $('#gameArea').width();
         var lamboWidth = $('#lambo').width();
         var ferrariWidth = $('#ferrari').width();
@@ -47,13 +47,16 @@ $(function() {
                 $('#resultH1').show();
             }
         });
-    })
 
+    })
+function resetGame(){
+  $('#results').hide();
+  $('#resultH1').hide();
+  $('#lambo').css('left', '0px');
+  $('#ferrari').css('left', '-15px');
+}
     $('#reset').click(function() {
-        $('#results').hide();
-        $('#resultH1').hide();
-        $('#lambo').css('left', '0px');
-        $('#ferrari').css('left', '-15px');
+      resetGame();
     })
 
 });
